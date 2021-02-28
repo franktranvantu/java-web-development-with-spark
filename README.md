@@ -1,3 +1,3 @@
-# Accepting Requests
+# Cookies
 
-Now that you have sent the responses down to the client, let’s figure out how you can capture their input and kick off a brand new Request/Response loop. You will gather information from the web form we pushed, down to the client.
+One of the ways you make HTTP appear to be stateful is by storing little bits of data on each request that is sent up to the server. These are called cookies. Let’s bake some!
