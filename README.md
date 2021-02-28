@@ -1,8 +1,3 @@
-# About this Course
-Spark is a Micro-framework that allows you to spin up a web server fairly easily.
+# Setup Spark
 
-## What you'll learn
-- Spark Microframework
-- Request Response loop
-- Session management
-- Error handling
+Spark is a Micro-Framework that’s sole purpose is to get you up and running and rapidly developing web applications. After we discuss the project for the course, let’s go get it installed. It’s a breeze!
