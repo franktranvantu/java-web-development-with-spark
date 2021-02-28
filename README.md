@@ -1,3 +1,3 @@
-# Building Our Model
+# Template Reuse and Static Resources
 
-Let’s use the Data Access Objects pattern to build an interface that you can use to store your data. You will not be connecting to a database in this course, but this is one way to ensure that your code will work when you do.
+We know that code duplication is something we want to avoid by all means. So let’s take a look at some best practices that will avoid duplication in your styles as well as your HTML.
