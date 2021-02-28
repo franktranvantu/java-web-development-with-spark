@@ -1,3 +1,3 @@
-# Setup Spark
+# Sending Responses
 
-Spark is a Micro-Framework that’s sole purpose is to get you up and running and rapidly developing web applications. After we discuss the project for the course, let’s go get it installed. It’s a breeze!
+Let’s explore how to capture a request from the web browser and send a response back. This is equivalent to outputting in a standard application. Let’s get the Handlebars template engine installed, so you will not need to create a huge escaped string.
