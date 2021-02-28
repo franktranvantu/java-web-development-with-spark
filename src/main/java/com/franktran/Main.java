@@ -1,5 +1,7 @@
 package com.franktran;
 
+import com.franktran.model.CourseIdeaDAO;
+import com.franktran.model.SimpleCourseIdeaDAO;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
@@ -12,6 +14,8 @@ import static spark.Spark.post;
 public class Main {
 
   public static void main(String[] args) {
+    CourseIdeaDAO dao = new SimpleCourseIdeaDAO();
+
     get("/", (req, res) -> {
       Map<String, String> model = new HashMap<>();
       model.put("username", req.cookie("username"));
