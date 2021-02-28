@@ -1,3 +1,3 @@
-# Sending Responses
+# Accepting Requests
 
-Let’s explore how to capture a request from the web browser and send a response back. This is equivalent to outputting in a standard application. Let’s get the Handlebars template engine installed, so you will not need to create a huge escaped string.
+Now that you have sent the responses down to the client, let’s figure out how you can capture their input and kick off a brand new Request/Response loop. You will gather information from the web form we pushed, down to the client.
