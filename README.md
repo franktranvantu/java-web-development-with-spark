@@ -1,3 +1,3 @@
-# Messaging
+# Build Your Own Flash Messages
 
-Let’s explore how to handle exceptions with grace and ease. You will write your own Flash messaging tool which you will use to inform your users one time over redirects.
+What do you do when your micro-framework doesn't provide a feature you need? You build it!
