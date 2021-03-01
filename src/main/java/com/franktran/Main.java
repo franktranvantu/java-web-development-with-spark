@@ -44,6 +44,6 @@ public class Main {
       dao.add(idea);
       res.redirect("/ideas");
       return null;
-    }, new HandlebarsTemplateEngine());
+    });
   }
 }
