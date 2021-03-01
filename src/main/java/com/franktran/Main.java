@@ -2,6 +2,7 @@ package com.franktran;
 
 import com.franktran.model.CourseIdea;
 import com.franktran.model.CourseIdeaDAO;
+import com.franktran.model.NotFoundException;
 import com.franktran.model.SimpleCourseIdeaDAO;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
@@ -70,6 +71,13 @@ public class Main {
       idea.addVoter(req.attribute("username"));
       res.redirect("/ideas");
       return null;
+    });
+
+    exception(NotFoundException.class, (ex, req, res) -> {
+      res.status(404);
+      HandlebarsTemplateEngine engine = new HandlebarsTemplateEngine();
+      String html = engine.render(new ModelAndView(null, "not-found.hbs"));
+      res.body(html);
     });
   }
 }

@@ -1,3 +1,3 @@
-# Details
+# Messaging
 
-This is how I added the Detail page to our application? How did you do?
+Let’s explore how to handle exceptions with grace and ease. You will write your own Flash messaging tool which you will use to inform your users one time over redirects.
