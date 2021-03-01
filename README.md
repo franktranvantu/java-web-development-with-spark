@@ -1,3 +1,3 @@
-# Using Filters and Request Attributes
+# Accessing Specific Items
 
-Filters come in handy when you want to process all requests a certain way, to avoid duplicating that code in each of your controllers. Request attributes in Spark allow you to share data on a single request as it flows through your site, allowing each filter and controller to access its properties.
+Most web applications follow the same design pattern, there is a list of items and a more detailed view of each item. Let’s ensure you can access a specific item from your list by using what is known as a slug.
