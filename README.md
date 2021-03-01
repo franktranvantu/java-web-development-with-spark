@@ -1,3 +1,3 @@
-# Adding to and Iterating a List
+# Using Filters and Request Attributes
 
-Let’s create a list of ideas and display them in our template. You will explore using the Model in our View that was passed to you from your Controller. MVC in action!
+Filters come in handy when you want to process all requests a certain way, to avoid duplicating that code in each of your controllers. Request attributes in Spark allow you to share data on a single request as it flows through your site, allowing each filter and controller to access its properties.

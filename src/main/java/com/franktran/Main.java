@@ -18,9 +18,15 @@ public class Main {
 
     CourseIdeaDAO dao = new SimpleCourseIdeaDAO();
 
+    before((req, res) -> {
+      if (req.cookie("username") != null) {
+        req.attribute("username", req.cookie("username"));
+      }
+    });
+
     get("/", (req, res) -> {
       Map<String, String> model = new HashMap<>();
-      model.put("username", req.cookie("username"));
+      model.put("username", req.attribute("username"));
       return new ModelAndView(model, "index.hbs");
     }, new HandlebarsTemplateEngine());
 
@@ -32,6 +38,13 @@ public class Main {
       return new ModelAndView(model, "sign-in.hbs");
     }, new HandlebarsTemplateEngine());
 
+    before("/ideas", (req, res) -> {
+      if (req.attribute("username") == null) {
+        res.redirect("/");
+        halt();
+      }
+    });
+
     get("/ideas", (req, res) -> {
       Map<String, Object> model = new HashMap<>();
       model.put("ideas", dao.findAll());
@@ -40,7 +53,7 @@ public class Main {
 
     post("/ideas", (req, res) -> {
       String title = req.queryParams("title");
-      CourseIdea idea = new CourseIdea(title, req.cookie("username"));
+      CourseIdea idea = new CourseIdea(title, req.attribute("username"));
       dao.add(idea);
       res.redirect("/ideas");
       return null;
