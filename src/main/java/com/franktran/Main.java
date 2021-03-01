@@ -1,5 +1,6 @@
 package com.franktran;
 
+import com.franktran.model.CourseIdea;
 import com.franktran.model.CourseIdeaDAO;
 import com.franktran.model.SimpleCourseIdeaDAO;
 import spark.ModelAndView;
@@ -29,6 +30,20 @@ public class Main {
       res.cookie("username", username);
       model.put("username", username);
       return new ModelAndView(model, "sign-in.hbs");
+    }, new HandlebarsTemplateEngine());
+
+    get("/ideas", (req, res) -> {
+      Map<String, Object> model = new HashMap<>();
+      model.put("ideas", dao.findAll());
+      return new ModelAndView(model, "ideas.hbs");
+    }, new HandlebarsTemplateEngine());
+
+    post("/ideas", (req, res) -> {
+      String title = req.queryParams("title");
+      CourseIdea idea = new CourseIdea(title, req.cookie("username"));
+      dao.add(idea);
+      res.redirect("/ideas");
+      return null;
     }, new HandlebarsTemplateEngine());
   }
 }

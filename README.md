@@ -1,3 +1,3 @@
-# Template Reuse and Static Resources
+# Adding to and Iterating a List
 
-We know that code duplication is something we want to avoid by all means. So let’s take a look at some best practices that will avoid duplication in your styles as well as your HTML.
+Let’s create a list of ideas and display them in our template. You will explore using the Model in our View that was passed to you from your Controller. MVC in action!
